@@ -21,7 +21,7 @@ def save_json_to_file(json_data, filename):
         json_file.write(json_data)
 
 def main():
-    image_path = "Screenshot 2024-03-19 195232.png"
+    image_path = "Screenshot 2025-02-13 224631.png"
     extracted_text = extract_text_from_image(image_path)
     json_output = structure_data_to_json(extracted_text)
     
@@ -29,7 +29,7 @@ def main():
     save_json_to_file(json_output, 'extracted_data.json')
     print(f"JSON data saved to 'extracted_data.json'.")
 
-    image_path = "Screenshot 2024-03-19 195232.png"
+    image_path = "Screenshot 2025-02-13 224631.png"
     extracted_text = extract_text_from_image(image_path)
     json_output = structure_data_to_json(extracted_text)
     
