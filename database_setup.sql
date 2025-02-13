@@ -2,6 +2,10 @@
 
 CREATE TABLE IF NOT EXISTS patient_assessments (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    assessment_text TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    patient_name TEXT,
+    age INTEGER,
+    assessment_date DATE,
+    symptoms TEXT,  
+    diagnosis TEXT,
+    medication TEXT  
 );
