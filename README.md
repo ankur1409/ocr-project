@@ -1,4 +1,4 @@
-# Patient Assessment OCR Project
+  # Patient Assessment OCR Project
 
 This project extracts text from scanned patient assessment forms using OCR, structures the data into JSON format, and stores it in a SQL database.
 

@@ -4,21 +4,32 @@ import json
 import sqlite3
 
 def extract_text_from_image(image_path):
-    """Extract text from a given image using OCR."""
+    
     image = Image.open(image_path)
     text = pytesseract.image_to_string(image)
     return text
 
 def structure_data_to_json(extracted_text):
-    """Structure the extracted text into JSON format."""
-    # Example structure, modify as needed
-    data = {
-        "patient_assessment": extracted_text
+  
+
+    data = { extracted_text
     }
     return json.dumps(data, indent=4)
 
+def save_json_to_file(json_data, filename):
+    with open(filename , 'w') as json_file:
+        json_file.write(json_data)
+
 def main():
-    image_path = 'path_to_your_image.jpg'  # Update with your image path
+    image_path = "Screenshot 2024-03-19 195232.png"
+    extracted_text = extract_text_from_image(image_path)
+    json_output = structure_data_to_json(extracted_text)
+    
+    # Save the JSON output to a file
+    save_json_to_file(json_output, 'extracted_data.json')
+    print(f"JSON data saved to 'extracted_data.json'.")
+
+    image_path = "Screenshot 2024-03-19 195232.png"
     extracted_text = extract_text_from_image(image_path)
     json_output = structure_data_to_json(extracted_text)
     
