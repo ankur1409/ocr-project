@@ -25,7 +25,7 @@ def main():
     extracted_text = extract_text_from_image(image_path)
     json_output = structure_data_to_json(extracted_text)
     
-    # Save the JSON output to a file
+   
     save_json_to_file(json_output, 'extracted_data.json')
     print(f"JSON data saved to 'extracted_data.json'.")
 
